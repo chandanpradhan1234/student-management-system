@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+
+<head>
+    <title>home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="S:\minor project\student_management\templates\style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    
+
+</head>
+
+<body style="background-color:#EDEDED;">
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand text-warning" href="/">Student mangement system</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto" >
+      <li class="nav-item ">
+        <a class="nav-link text-success" href="/">Home <i class="fa fa-home " aria-hidden="true"></i>  <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link text-success" href="/about">About<i class="fa fa-info-circle" aria-hidden="true"></i></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link text-success" href="/student">Student Dashboard <i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link text-success" href="/faculty">faculty Dashboard <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+      </li>
+      <li class="nav-item active ">
+        <a class="nav-link text-success" href="/contact">Contact <i class="fa fa-phone" aria-hidden="true"></i></a>
+      </li>
+         <li class="nav-item ">
+        <a class="nav-link text-success" href="/faq">FAQ <i class="fa fa-question-circle" aria-hidden="true"></i></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+{% comment %} faq section {% endcomment %}
+
+
+<div class="container" >
+<div class="accordion" id="accordion" >
+
+                <!-- 1st FAQ -->
+<div class="card">
+
+<div class="card-header">
+<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapse1">I have a name mismatch with my government photo ID proof. What to do?</button>
+</div>
+
+<div id="collapse1" class="collapse" data-parent="#accordion">
+<div class="card-body">
+<p>Kindly make sure the name mentioned should match with one of your government photo ID proofs (PAN card, passport, voter ID, driving license). First name, middle name (optional), last name- {no single / special character in first name and last name}. First name should match completely with your government photo ID proof.
+
+Kindly expand the initials since first name and last name should be more than one character. However, the same name should match with any one of the government photo ID proofs provided (PAN card, passport, voter ID, driving license).</p>
+</div>
+</div>
+</div>
+
+                <!-- 2nd FAQ -->
+<div class="card">
+<div class="card-header">
+<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapse2">I don't have a last name. What is the right way to mention my name?</button>
+</div>
+<div id="collapse2" class="collapse" data-parent="#accordion">
+<div class="card-body">
+Kindly mention your father's/mother’s first name as your last name. Ensure that your primary government photo ID proof should include your father's/mother’s name.
+</div>
+</div>
+</div>
+                <!-- 3rd FAQ -->
+
+<div class="card">
+<div class="card-header">
+<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapse3">I have applied for a PAN Card and have received the acknowledgement receipt. Can I upload that in place of my PAN Card?</button>
+</div>
+<div id="collapse3" class="collapse" data-parent="#accordion">
+<div class="card-body">
+No. Kindly upload the original government photo ID proof, once received.
+</div>
+</div>
+</div>
+
+            <!-- 4th FAQ -->
+
+<div class="card">
+<div class="card-header">
+<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapse4">Candidate is selected for more than one job </button>
+</div>
+<div id="collapse4" class="collapse" data-parent="#accordion">
+<div class="card-body">
+Give the deatils of job with heighest package
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapse5">Candidate  interested in collage placement</button>
+</div>
+<div id="collapse5" class="collapse" data-parent="#accordion">
+<div class="card-body">
+Only final year candidates are allowed to seat in collage placement
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<footer class="bg-warning text-dark">
+<p class="text-center py-2 my-0">Copyright &copy; 2021 - All rights reserved &nbsp;&nbsp; <i class="fa fa-facebook-official" aria-hidden="true" style="color:#0A82EC;font-size:30px" href=""></i>&nbsp;<i class="fa fa-instagram" aria-hidden="true" style="color:#CA3D74;font-size:30px"></i>&nbsp;<i class="fa fa-twitter" aria-hidden="true" style="color:#1C9CEA;font-size:30px"></i><i class="fa fa-linkedin-square" aria-hidden="true" style="color:#0E72A3;font-size:30px"></i></p></footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>

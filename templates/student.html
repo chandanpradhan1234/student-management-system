@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+
+<head>
+    <title>home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    
+
+</head>
+
+<body style="background-color:#EDEDED;">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <a class="navbar-brand text-warning" href="/">Student mangement system</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link text-success" href="/">Home <i class="fa fa-home " aria-hidden="true"></i>  <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link text-success" href="/about">About <i class="fa fa-info-circle" aria-hidden="true"></i></a>
+      </li>
+      <li class="nav-item active ">
+        <a class="nav-link text-success" href="/student">Student Dashboard <i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link text-success" href="/faculty">faculty Dashboard <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link text-success" href="/contact">Contact <i class="fa fa-phone" aria-hidden="true"></i></a>
+      </li>
+         <li class="nav-item ">
+        <a class="nav-link text-success" href="/faq">FAQ <i class="fa fa-question-circle" aria-hidden="true"></i></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+    
+<div class="container">
+
+<div class="container" style="background-color:#282828;">
+
+<h2 class="text-center my-3 font-weight-bold text-warning" style="font-family:Helvetica;font-size:45px;">Fill the form</h2>
+<div class="alert alert-danger" role="alert">
+  <strong class="text-danger">Student deatils </strong>
+</div>
+<form action="/student" method="POST" style="color:#93C54B;" class="font-weight-bold">
+  {% csrf_token %}
+
+  <div class="form-group">
+  <label for="exampleFormControlInput1" class="my-4" >First Name</label>
+    <input type="Text" class="form-control" name="fname" id="exampleFormControlInput1" placeholder="Your First name">
+    
+    <label for="exampleFormControlInput1" class="my-4" >Second Name</label>
+    <input type="Text" class="form-control" name="lname" id="exampleFormControlInput1" placeholder="Your Second name">
+    <label for="exampleFormControlInput1" class="my-4">Email address</label>
+    <input type="email" class="form-control"  name="email" id="exampleFormControlInput1" placeholder="Your Email Address">
+     
+  </div>
+
+  <div style="margin-top:50px;;">
+   <label class="my-4">DOB</label>
+    <input type="date" name="dob">
+   
+  </div>
+
+  <div class="form-check">
+  <input class="form-check-input" type="radio" name="gender" value="F" id="flexRadioDefault2" >
+  <label class="form-check-label " for="flexRadioDefault2">
+    Female
+  </label><br>
+  <input class="form-check-input" type="radio" name="gender" value="M" id="flexRadioDefault1">
+  <label class="form-check-label " for="flexRadioDefault1">
+    Male
+  </label>
+</div>
+
+ <div class="form-group">
+  <label for="exampleFormControlInput1" class="my-4" >Collage</label>
+    <input type="Text" class="form-control" name="collage" id="exampleFormControlInput1" placeholder="Your Collage Name">
+  </div>
+
+
+  <div class="form-group ">
+    <label for="exampleFormControlSelect1" class="text-center mb-4 ">City</label>
+    <select class="form-control" id="exampleFormControlSelect1"  name="city">
+      <option>--Select City--</option>
+      <option>Rourkela</option>
+      <option>Bhubaneswar</option>
+      <option>Kolkata</option>
+      <option>Pune</option>
+      <option>Delhi</option>
+    </select>
+  </div>
+
+  <div class="form-group ">
+    <label  class="text-center mb-4 ">Course</label>
+    <select class="form-control"name="course">
+      <option>--Select Course--</option>
+      <option>MCA</option>
+      <option>BCA</option>
+      <option>MBA</option>
+      <option>BBA</option>
+      <option>M-TEC</option>
+    </select>
+  </div>
+
+  <div class="form-group my-4">
+ 
+  <label class="form-label" for="customFile">Upload Photo</label>
+<input type="file"  id="customFile" name="photo" />
+  </div>
+ 
+ 
+  <div class="form-group">
+  <label  class="my-4" >Adhar number</label>
+    <input type="Text" class="form-control" name="ano" id="exampleFormControlInput1" placeholder="Your Adhar Number">
+  <label for="exampleFormControlInput1" class="my-4" >Pan number</label>
+    <input ty name="pno" id="exampleFormControlInput1" placeholder="Your Pan Number">
+  <label  class="my-4" >Mobile number</label>
+    <input type="Text" class="form-control" name="phno" id="exampleFormControlInput1" placeholder="Your Mobile Number">
+  </div>
+  
+  
+
+  <!--placement deatils-->
+  <div class="alert alert-danger" role="alert">
+    <strong class="text-danger">Placement Deatils </strong>
+  </div>
+  
+  <div class="form-group my-4 ">
+    <label  class="text-center mb-4 ">Student Placed In</label>
+    <select class="form-control"   name="company">
+      <option>--Select Company--</option>
+      <option>IBM</option>
+      <option>TCS</option>
+      <option>WIPRO</option>
+      <option>Tech mahindra</option>
+      <option>HCL</option>
+    </select>
+  </div>
+  
+  <div class="form-group my-4 ">
+    <label  class="text-center mb-4 ">Location</label>
+    <select class="form-control"   name="location">
+     <option>--Select Location--</option>
+      <option>Bangalore</option>
+      <option>Bhubaneswar</option>
+      <option>Kolkata</option>
+      <option>Mumbai</option>
+      <option>Pune</option>
+    </select>
+  </div>
+
+   <div class="form-group my-4 ">
+    <label  class="text-center mb-4 ">Package</label>
+    <select class="form-control" id="exampleFormControlSelect1"  name="package">
+     <option>--Select Package--</option>
+      <option>4 LPA</option>
+      <option>5 LPA</option>
+      <option>7 lPA</option>
+      <option>10 lPA</option>
+      <option>12 LPA</option>
+    </select>
+  </div>
+
+   <div class="form-group my-4 ">
+    <label  class="text-center mb-4 ">Job</label>
+    <select class="form-control"   name="job">
+     <option>--Select Job--</option>
+      <option>Full stack Developer</option>
+      <option>Software Engineer</option>
+      <option>React Web Developer </option>
+      <option>Graphic Designer </option>
+      <option>Django Web Developer</option>
+      <option>Cybersecurity consultant </option>
+    </select>
+  </div>
+
+  <div class="alert alert-danger" role="alert">
+    <strong class="text-danger">Performance Deatils </strong>
+  </div>
+
+  
+  <div class="form-group ">
+    <label  class="text-center mb-4 ">Semester</label>
+    <select class="form-control"name="semester">
+      <option>--Select Semester--</option>
+      <option>Semester I</option>
+      <option>Semester II</option>
+      <option>Semester III</option>
+      <option>Semester IV</option>
+      <option>Semester V</option>
+      <option>Semester VI</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+  <label class="my-4" >Percentage</label>
+    <input type="Text" class="form-control" name="percent" id="exampleFormControlInput1" placeholder="Student Percenatge">
+  </div>
+
+
+   <div class="form-group my-4 ">
+    <label  class="text-center mb-4 ">Academic Performance</label>
+    <select class="form-control" id="exampleFormControlSelect1"  name="grade">
+     <option>--Select Grade--</option>
+      <option>Grade A</option>
+      <option>Grade A+</option>
+      <option>Grade O</option>
+      <option>Grade B</option>
+      <option>Grade D</option>
+      <option>Grade E</option>
+    </select>
+  </div>
+
+   <div class="form-group my-4 ">
+    <label  class="text-center mb-4 ">Participated In</label>
+    <select class="form-control"   name="activity">
+     <option>--Select Activites--</option>
+      <option>Mathematical Olympiad</option>
+      <option>Debating Contest</option>
+      <option>Chess</option>
+      <option>Singing </option>
+      <option>Dance</option>
+      <option>Art Contest</option>
+    </select>
+  </div>
+
+
+  <button type="submit" class="btn btn-success my-3">Submit</button>
+</form>
+</div>
+</div>
+
+<footer class="bg-warning text-dark my-3">
+<p class="text-center py-2 my-0">Copyright &copy; 2021 - All rights reserved &nbsp;&nbsp; <i class="fa fa-facebook-official" aria-hidden="true" style="color:#0A82EC;font-size:30px" href=""></i>&nbsp;<i class="fa fa-instagram" aria-hidden="true" style="color:#CA3D74;font-size:30px"></i>&nbsp;<i class="fa fa-twitter" aria-hidden="true" style="color:#1C9CEA;font-size:30px"></i><i class="fa fa-linkedin-square" aria-hidden="true" style="color:#0E72A3;font-size:30px"></i></p></footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
